@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+		
+    <bean id="dataSource2" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+         <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+       <property name="url"><value>jdbc:mysql://masterdb.ac.idc.pplive.cn:3306/pplive_activity?characterEncoding=utf-8</value></property>      
+         <property name="username"><value>pp_activity</value></property>
+        <property name="password"><value>aAh!jqAw^jASFerqj</value></property> 
+        <property name="maxActive"><value>100</value></property>
+        <property name="maxIdle"><value>10</value></property>
+        <property name="maxWait"><value>120000</value></property>
+        <property name="defaultAutoCommit"><value>true</value></property>
+        <property name="removeAbandoned"><value>true</value></property>
+        <property name="removeAbandonedTimeout"><value>180</value></property>
+        <property name="testOnBorrow">
+        	<value>true</value>
+        </property>
+        <property name="validationQuery">
+        	<value>select 1 from dual</value>
+        </property>
+    </bean>
+</beans>
+
+
