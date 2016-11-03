@@ -6,7 +6,7 @@
 	<display-name>sayanything</display-name>
 
 	<!--此处的filter-name必须在Spring中有个同名的bean -->
-	<!-- <filter>
+	<filter>
 		<filter-name>shiroFilter</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 		<init-param>
@@ -18,7 +18,7 @@
 	<filter-mapping>
 		<filter-name>shiroFilter</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>-->
+	</filter-mapping>
 
 	<!-- CharacterEncodingFilter -->
 	<filter>
@@ -35,6 +35,16 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 

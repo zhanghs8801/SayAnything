@@ -14,5 +14,5 @@
     <!-- 用户服务 -->
     <import resource="spring-mvc.xml"/>
     <import resource="spring-data.xml"/>
-    <!-- <import resource="shiro.xml"/> -->
+    <import resource="shiro.xml"/>
 </beans>
